@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sequoia vs Stratasys F900 Comparison</title>
+<style>
+  /* Base styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f7fa;
+    color: #1a3050; /* 3ntr Blue */
+  }
+  header {
+    background-color: #17407b; /* deeper 3ntr blue */
+    color: white;
+    text-align: center;
+    padding: 24px 0;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+  main {
+    max-width: 960px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 48px 56px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgb(23 64 123 / 0.2);
+  }
+  h1, h2 {
+    margin-bottom: 24px;
+    font-weight: 800;
+  }
+  h1 {
+    font-size: 2.8rem;
+    color: #17407b;
+  }
+  h2 {
+    border-bottom: 3px solid #17407b;
+    padding-bottom: 12px;
+    font-size: 2rem;
+  }
+  p.subtitle {
+    margin-top: -14px;
+    margin-bottom: 48px;
+    font-size: 1.25rem;
+    color: #3a4f7a;
+    max-width: 700px;
+  }
+  
+  /* Two columns layout */
+  .columns {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .machine-card {
+    flex: 1 1 45%;
+    padding: 0 0 24px 0;
+    border: 2px solid #c2d0f3;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgb(23 64 123 / 0.1);
+    background-color: #e8efff;
+  }
+  .machine-header {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 20px 0 24px 0;
+    text-align: center;
+    color: #082454;
+  }
+  .machine-image-placeholder {
+    width: 100%;
+    height: 220px;
+    border: 3px dashed #17407b;
+    border-radius: 10px;
+    margin: 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #17407b;
+    font-weight: 600;
+  }
+  ul.features-list {
+    list-style: none;
+    padding-left: 32px;
+    margin: 0 24px 24px 24px;
+    font-size: 1.1rem;
+    color: #1a3050;
+  }
+  ul.features-list li {
+    position: relative;
+    margin-bottom: 18px;
+  }
+  ul.features-list li::before {
+    content: '●';
+    color: #17407b;
+    display: inline-block;
+    width: 18px;
+    margin-left: -28px;
+    font-weight: 900;
+  }
+
+  /* Comparison table */
+  table.compare-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgb(23 64 123 / 0.15);
+    font-size: 1.1rem;
+    margin-top: 42px;
+  }
+  table.compare-table thead th {
+    background-color: #17407b;
+    color: white;
+    padding: 16px 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  table.compare-table tbody td {
+    padding: 18px 20px;
+    text-align: center;
+    border-bottom: 1px solid #dfe7f5;
+  }
+  table.compare-table tbody td:first-child {
+    background-color: #e3e9fa;
+    color: #102b60;
+    font-weight: 600;
+    text-align: left;
+  }
+  table.compare-table tbody tr:nth-child(even) td {
+    background-color: #f8fbff;
+  }
+  caption {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #5d74a7;
+    padding: 12px 0 4px 0;
+  }
+
+  /* Strengths list */
+  .strengths-list {
+    margin-top: 44px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #1a3050;
+  }
+  .strengths-list li {
+    margin-bottom: 16px;
+  }
+  .strengths-list li::before {
+    content: '✓';
+    color: #17407b;
+    margin-right: 12px;
+    font-weight: 700;
+  }
+
+  /* Call to action */
+  .cta-container {
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 32px;
+  }
+  .cta-button {
+    font-weight: 800;
+    font-size: 1.3rem;
+    background-color: #17407b;
+    color: white;
+    padding: 18px 58px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 32px rgb(23 64 123 / 0.35);
+    text-decoration: none;
+    display: inline-block;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  .cta-button:hover,
+  .cta-button:focus {
+    background-color: #0f274d;
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 720px) {
+    .columns {
+      flex-direction: column;
+    }
+    .machine-card {
+      flex-basis: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>3ntr - Sequoia vs Stratasys F900</header>
+
+<main>
+
+  <!-- Title -->
+  <section aria-label="Presentation Title">
+    <h1>Sequoia vs Stratasys F900</h1>
+    <p class="subtitle">
+      The definitive comparison for large format industrial 3D printing:<br/>
+      Italian innovation and flexibility vs American tradition and rigidity.
+    </p>
+  </section>
+
+  <!-- Executive Summary -->
+  <section aria-label="Executive Summary">
+    <h2>Executive Summary</h2>
+    <div class="columns">
+
+      <article class="machine-card" aria-labelledby="sequoia-title">
+        <div id="sequoia-title" class="machine-header">3ntr Sequoia</div>
+        <div class="machine-image-placeholder">Image Placeholder - 3ntr Sequoia</div>
+        <ul class="features-list">
+          <li>Build Volume: <strong>1200 × 1100 × 900 mm</strong></li>
+          <li>Max Heated Chamber Temperature: <strong>185°C</strong></li>
+          <li>Max Nozzle Temperature: <strong>500°C</strong></li>
+          <li>Precision (XY / Z): <strong>0.01 mm / 0.0002 mm</strong></li>
+          <li>Number of Extruders: <strong>3 independent</strong></li>
+          <li>Machine Weight: <strong>1300 kg</strong></li>
+          <li>Advanced Automation Included</li>
+          <li>No Compressed Air Required</li>
+        </ul>
+      </article>
+
+      <article class="machine-card" aria-labelledby="f900-title">
+        <div id="f900-title" class="machine-header">Stratasys F900</div>
+        <div class="machine-image-placeholder">Image Placeholder - Stratasys F900</div>
+        <ul class="features-list">
+          <li>Build Volume: <strong>914.4 × 609.6 × 914.4 mm</strong></li>
+          <li>Max Heated Chamber Temperature: <strong>ND (Not Disclosed)</strong></li>
+          <li>Max Nozzle Temperature: <strong>ND (Not Disclosed)</strong></li>
+          <li>Precision (XY / Z): <strong>±0.089 mm / ±0.0015 mm/mm</strong></li>
+          <li>Number of Extruders: <strong>1</strong></li>
+          <li>Machine Weight: <strong>2869 kg</strong></li>
+          <li>Requires Compressed Air (90-120 psi)</li>
+          <li>Certified Materials & Proprietary Ecosystem</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section aria-label="Comparison Table">
+    <h2>Technical Comparison Table</h2>
+    <table class="compare-table" role="table" aria-describedby="comp-desc">
+      <caption id="comp-desc">
+        Verified technical specifications comparing 3ntr Sequoia and Stratasys F900 industrial 3D printers.
+      </caption>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>3ntr Sequoia</th>
+          <th>Stratasys F900</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Build Volume (XYZ)</td><td>1200 × 1100 × 900 mm</td><td>914.4 × 609.6 × 914.4 mm</td></tr>
+        <tr><td>Max Heated Chamber Temperature</td><td>185°C</td><td>ND</td></tr>
+        <tr><td>Max Nozzle Temperature</td><td>500°C</td><td>ND</td></tr>
+        <tr><td>Positioning Precision (XY / Z)</td><td>0.01 mm / 0.0002 mm</td><td>±0.089 mm / ±0.0015 mm/mm</td></tr>
+        <tr><td>Number of Extruders</td><td>3</td><td>1</td></tr>
+        <tr><td>Machine Weight</td><td>1300 kg</td><td>2869 kg</td></tr>
+        <tr><td>Compressed Air Required</td><td>No</td><td>Yes (90-120 psi)</td></tr>
+        <tr><td>Automation Features</td><td>Auto leveling, nozzle cleaning, jam detection</td><td>Automatic material changeover</td></tr>
+        <tr><td>Software Compatibility</td><td>Open G-code</td><td>GrabCAD Print™, Insight™</td></tr>
+        <tr><td>Material Support</td><td>Any polymer HC&lt;120°C (up to 200°C Q4 2023)</td><td>15+ certified materials</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Where Sequoia Shines -->
+  <section aria-label="Where Sequoia Shines">
+    <h2>Where Sequoia Shines</h2>
+    <ul class="strengths-list">
+      <li>134% larger build volume compared to F900</li>
+      <li>High-temperature heated chamber at 185°C supports advanced polymers</li>
+      <li>Three independent extruders allow versatile multi-material printing</li>
+      <li>Superior micrometric precision on XY and Z axes</li>
+      <li>No compressed air needed, simplifying installation and reducing maintenance</li>
+      <li>Intelligent automation features: automatic bed leveling, nozzle cleaning, jam detection</li>
+    </ul>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="cta-container" aria-label="Request a Demo">
+    <a href="mailto:info@3ntr.net" class="cta-button" role="button" aria-describedby="cta-desc">Request a Demo</a>
+    <p id="cta-desc" style="margin-top: 12px; font-size: 1rem; color: #475a8a;">
+      Contact our team to experience the future of large format 3D printing with Sequoia.
+    </p>
+  </section>
+
+</main>
+</body>
+</html>
